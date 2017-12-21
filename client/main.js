@@ -1,16 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { Links } from '../imports/collections/links';
-
 import Header from './components/Header';
 import LinksCreate from './components/LinksCreate';
+import LinkList from './components/LinkList';
 
 const App = () => {
     return (
         <div>
             <Header/>
             <LinksCreate/>
+            <LinkList/>
         </div>
     );
 };
