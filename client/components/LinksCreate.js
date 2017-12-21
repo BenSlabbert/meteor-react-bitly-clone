@@ -5,6 +5,14 @@ class LinksCreate extends Component {
     handleSubmit( e ) {
         e.preventDefault();
         let link = this.refs.link.value;
+
+        Meteor.call( 'links.insert', link, ( err, res ) => {
+            if ( err ) {
+                console.log( 'err', err );
+            } else {
+                console.log( 'res', res );
+            }
+        } );
     }
 
     render() {
